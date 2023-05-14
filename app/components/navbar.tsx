@@ -27,8 +27,12 @@ function Navbar({links}: INavbar) {
               <div className="hidden py-6 xl:flex w-full items-center justify-end px-5">
                 <ul className="hidden xl:flex font-semibold font-heading space-x-12">
                   {
-                    links.map((link) => (
-                      <li><Link className="hover:text-sky-700 text-black" href={link.route}>{link.label}</Link></li>
+                    links.map((link, index) => (
+                      <li key={index}>
+                        <Link className="hover:text-sky-700 text-black" href={link.route}>
+                          {link.label}
+                        </Link>
+                      </li>
                     ))
                   }
                 </ul>
@@ -37,7 +41,7 @@ function Navbar({links}: INavbar) {
               </a>
               <a className="navbar-burger self-center px-5 xl:hidden" href="#">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 hover:text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                   </svg>
               </a>
             </nav>
@@ -46,7 +50,7 @@ function Navbar({links}: INavbar) {
       </div>
       <div className="absolute bottom-5 right-5 mb-4 mr-8 z-10">
           <div>
-              <a title="Siguenos en Instagram!" href="https://www.instagram.com/bahiabravamcbo/" target="_blank" className="block w-16 h-16 rounded-full transition-all shadow hover:shadow-lg transform hover:scale-110 hover:rotate-12">
+              <a title="Siguenos en Instagram!" href="https://www.instagram.com/bahiabravamcbo/" target="_blank"  className="block w-16 h-16 rounded-full transition-all shadow hover:shadow-lg transform hover:scale-110 hover:rotate-12">
                   <Image className="object-cover object-center w-full h-full rounded-full" alt="RRSS Logo" width={100} height={100} src={InstagramLogo}/>
               </a>
           </div>
