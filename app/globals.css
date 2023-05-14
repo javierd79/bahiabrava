@@ -2,26 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.home {
+  /* background-image: url("./assets/sect_screen_bb.jpg"); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  object-fit: fill;
+  background: rgb(129,193,195);
+  background: -moz-linear-gradient(180deg, rgba(129,193,195,1) 35%, rgba(242,139,46,1) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(129,193,195,1) 35%, rgba(242,139,46,1) 100%);
+  background: linear-gradient(180deg, rgba(129,193,195,1) 35%, rgba(242,139,46,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#81c1c3",endColorstr="#f28b2e",GradientType=1);
 }
