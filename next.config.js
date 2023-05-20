@@ -1,23 +1,17 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: '/app/api/:path*',
-      },
-    ];
-  },
-}
+const nextConfig = {}
 
-module.exports = {
-  // Otras configuraciones...
-  async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: '/app/api/:path*',
-      },
-    ];
+const withImages = require('next-images');
+
+module.exports = withImages({
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.module.rules.push({
+        test: /\.node$/,
+        loader: 'ignore-loader',
+      });
+    }
+
+    return config;
   },
-};
+});

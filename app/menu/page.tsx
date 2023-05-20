@@ -1,10 +1,10 @@
 "use client"
 
-import React, { useState, useEffect } from 'react'
-
-type IMenu = {}
+import React, { useState, useEffect } from 'react';
+import PDFViewer from '../components/PDFViewer';
 
 function Menu() {
+  const URL = '/bahia-brava-menu.pdf'
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -22,15 +22,7 @@ function Menu() {
               <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-gray-900"></div>
             </div>
           ) : (
-            <embed 
-              type='application/pdf' 
-              src='/bahia-brava-menu.pdf' 
-              width='100%'
-              style={{
-                minHeight: '100vh',
-                overflow: 'hidden'
-              }} 
-            />
+            <PDFViewer url={URL} />
           )
         }
       </section>
