@@ -1,7 +1,4 @@
 import React from 'react'
-import BahiaBravaLogo from "../assets/bahia-brava-logo.jpg"
-import BahiaLogo from "../assets/bahia-logo.jpg"
-import InstagramLogo from "../assets/instagram-logo.png"
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -26,7 +23,7 @@ function Navbar({ links }: INavbar) {
                     alt="Bahia Brava Logo"
                     width={35}
                     height={35}
-                    src={BahiaLogo}
+                    src='/bahialogo.png'
                   />
                 </a>
               </div>
@@ -78,7 +75,7 @@ function Navbar({ links }: INavbar) {
               alt="RRSS Logo"
               width={100}
               height={100}
-              src={InstagramLogo}
+              src='/instagramlogo.png'
             />
           </a>
         </div>

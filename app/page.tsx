@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Navbar from './components/navbar'
-import QR from './assets/QR.jpeg'
 export default function Home() {
   return (
     <main className="flex overflow-hidden min-h-screen flex-col items-center justify-between">
@@ -21,7 +20,7 @@ export default function Home() {
           Escanea nuestro menú aquí
         </p>
         <div className='flex flex-row items-center justify-center pt-2'>
-          <Image className="object-cover object-center rounded-md" alt="QR" width={300} height={300} src={QR}/>
+          <Image className="object-cover object-center rounded-md" alt="QR" width={300} height={300} src='/qr.png'/>
         </div>
       </section>
     </main>
