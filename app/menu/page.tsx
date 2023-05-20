@@ -1,19 +1,38 @@
-import React from 'react'
-import Navbar from '../components/navbar'
+"use client"
 
-type Props = {}
+import React, { useState, useEffect } from 'react'
 
-function Menu({}: Props) {
+type IMenu = {}
+
+function Menu() {
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 3000)
+  }, [])
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
-      <Navbar links={[
-        {label: 'Home', route: '/'},
-        {label: 'Menú', route: '/menu'}
-      ]} />
-      <section className='menu flex flex-col items-center justify-start flex-1 py-4 w-full h-100 px-20 bg-sky-100'>
-        <h1 className='sm:text-3xl text-xl font-bold'>
-          Menú
-        </h1>
+    <main className="flex min-h-screen flex-col items-center justify-between overflow-hidden overflow-y-hidden">
+      <section className='home flex flex-col items-center justify-start flex-1 py-4 w-full h-screen px-20 overflow-hidden overflow-y-hidden'>
+        {
+          loading ? (
+            <div className="flex justify-center items-center h-screen">
+              <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-gray-900"></div>
+            </div>
+          ) : (
+            <embed 
+              type='application/pdf' 
+              src='/bahia-brava-menu.pdf' 
+              width='100%'
+              style={{
+                minHeight: '100vh',
+                overflow: 'hidden'
+              }} 
+            />
+          )
+        }
       </section>
     </main>
   )
