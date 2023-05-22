@@ -1,22 +1,26 @@
 import { useEffect, useRef } from 'react';
-import WebViewer from '@pdftron/webviewer';
 
 const PDFViewer = () => {
   const viewerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (viewerRef.current) {
-      WebViewer(
-        {
-          path: '/webviewer/lib',
-          initialDoc: '/files/bahia-brava-menu.pdf',
-        },
-        viewerRef.current
-      ).then((instance) => {
-        instance.UI.setTheme('dark');
-        instance.UI.FitMode.FitWidth = '100%';
-      });
-    }
+    const initializePDFViewer = async () => {
+      if (viewerRef.current) {
+        const { default: WebViewer } = await import('@pdftron/webviewer');
+
+        WebViewer(
+          {
+            path: '/webviewer/lib',
+            initialDoc: '/files/bahia-brava-menu.pdf',
+          },
+          viewerRef.current
+        ).then((instance) => {
+          instance.UI.setTheme('dark');
+        });
+      }
+    };
+
+    initializePDFViewer();
   }, []);
 
   return (
