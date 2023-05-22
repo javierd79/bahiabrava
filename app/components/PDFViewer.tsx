@@ -1,23 +1,27 @@
-import React from 'react';
-import { Document, Page } from '@react-pdf/renderer';
+import { useEffect, useRef } from 'react';
+import WebViewer from '@pdftron/webviewer';
 
-interface PDFViewerProps {
-  url: string;
-}
+const PDFViewer = () => {
+  const viewerRef = useRef<HTMLDivElement>(null);
 
-const PDFViewer: React.FC<PDFViewerProps> = ({ url }) => {
+  useEffect(() => {
+    if (viewerRef.current) {
+      WebViewer(
+        {
+          path: '/webviewer/lib',
+          initialDoc: '/files/bahia-brava-menu.pdf',
+        },
+        viewerRef.current
+      ).then((instance) => {
+        instance.UI.setTheme('dark');
+        instance.UI.FitMode.FitWidth = '100%';
+      });
+    }
+  }, []);
+
   return (
-    <div style={{ width: '100%', height: '100vh', overflow: 'auto' }}>
-      <Document>
-        <Page size="A2" style={{ minWidth: '100%', minHeight: '100vh' }}>
-          <iframe
-            src={url}
-            width="100%"
-            height="100%"
-            style={{ border: 'none' }}
-          />
-        </Page>
-      </Document>
+    <div className="h-screen w-full px-5" ref={viewerRef}>
+      
     </div>
   );
 };
