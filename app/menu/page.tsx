@@ -18,7 +18,7 @@ function Menu() {
             target="_blank"
             style={{
               bottom: '1.6rem',
-              right: '30px'
+              right: '15px'
             }}
           >
             <Image
@@ -38,7 +38,7 @@ function Menu() {
           rel="noopener noreferrer"
           style={{
             bottom: '2rem',
-            right: '120px',
+            right: '95px',
             fontWeight: 300
           }}
         >
