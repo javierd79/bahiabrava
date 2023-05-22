@@ -16,6 +16,8 @@ const PDFViewer = () => {
           viewerRef.current
         ).then((instance) => {
           instance.UI.setTheme('dark');
+          instance.UI.hideFormFieldIndicators();
+          instance.UI.disableElements(['downloadButton', 'viewControlsButton', 'searchButton', 'leftPanelButton', 'annotationCommentButton', 'toolsButton', 'menuButton', 'ribbons']);
         });
       }
     };
