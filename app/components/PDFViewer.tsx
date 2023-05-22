@@ -26,7 +26,9 @@ const PDFViewer = () => {
   }, []);
 
   return (
-    <div className="h-screen w-full px-5" ref={viewerRef} />
+    <div className="w-full px-5 z-20" style={{
+      height: 'calc(100vh - 6rem)'
+    }} ref={viewerRef} />
   );
 };
 

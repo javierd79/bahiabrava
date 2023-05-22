@@ -9,15 +9,35 @@ function Menu() {
     <main className="flex min-h-screen flex-col items-center justify-between overflow-hidden overflow-y-hidden">
       <section className='home flex flex-col items-center justify-start flex-1 py-4 w-full h-screen overflow-hidden overflow-y-hidden'>
         <PDFViewer />
-        <div className="absolute bottom-5 right-5 mb-4 mr-8 z-10">
-        <div className='flex'>
+        <div className='flex z-50 pt-2 w-full justify-center' style={{
+          padding: '0 1.25rem 0 1.25rem'
+        }}>
+          <div className='father flex w-full justify-center' style={{
+            background: 'rgb(33, 36, 42)',
+          }}>
+          <div className='pr-2'>
+            <a 
+              className="sm:text-md opacity-100 hover:opacity-100 hover:bg-sky-200 p-4 mx-5 text-sm bg-white mt-0 rounded-xs shadow-lg"
+              href="https://wa.me/584246279056?text=¡Hola!%20Me%20gustaría%20ordenar." 
+              type="button"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                bottom: '2rem',
+                right: '100px',
+                fontWeight: 300
+              }}
+            >
+              Ordena tu pedido aquí
+            </a>
+          </div>
           <a
-            className="fixed w-16 h-16 rounded-full transition-all shadow hover:shadow-lg transform hover:scale-110 hover:rotate-12"
+            className="w-16 h-16 rounded-full transition-all shadow hover:shadow-lg transform hover:scale-110 hover:rotate-12"
             title="Siguenos en Instagram!"
             href="https://www.instagram.com/bahiabravamcbo/"
             target="_blank"
             style={{
-              bottom: '1.6rem',
+              marginTop: '-5px',
               right: '20px'
             }}
           >
@@ -29,22 +49,8 @@ function Menu() {
               src='/instagramlogo.png'
             />
           </a>
+          </div>
         </div>
-        <a 
-          className="fixed sm:text-md opacity-100 hover:opacity-100 hover:bg-sky-200 p-4 mx-5 text-sm bg-white mt-0 rounded-xs shadow-lg"
-          href="https://wa.me/584246279056?text=¡Hola!%20Me%20gustaría%20ordenar." 
-          type="button"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            bottom: '2rem',
-            right: '100px',
-            fontWeight: 300
-          }}
-        >
-          Ordena tu pedido aquí
-        </a>
-      </div>
       </section>
     </main>
   )
