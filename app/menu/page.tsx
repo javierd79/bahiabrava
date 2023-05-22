@@ -12,13 +12,13 @@ function Menu() {
         <div className="absolute bottom-5 right-5 mb-4 mr-8 z-10">
         <div className='flex'>
           <a
-            className="fixed w-16 h-16 rounded-full transition-all shadow hover:shadow-lg transform hover:scale-110 hover:rotate-12"
+            className="absolute w-16 h-16 rounded-full transition-all shadow hover:shadow-lg transform hover:scale-110 hover:rotate-12"
             title="Siguenos en Instagram!"
             href="https://www.instagram.com/bahiabravamcbo/"
             target="_blank"
             style={{
               bottom: '1.6rem',
-              right: '10px'
+              right: '30px'
             }}
           >
             <Image
@@ -31,14 +31,14 @@ function Menu() {
           </a>
         </div>
         <a 
-          className="fixed sm:text-md opacity-100 hover:opacity-100 hover:bg-sky-200 p-4 mx-5 text-sm bg-white mt-0 rounded-xs shadow-lg"
+          className="absolute sm:text-md opacity-100 hover:opacity-100 hover:bg-sky-200 p-4 mx-5 text-sm bg-white mt-0 rounded-xs shadow-lg"
           href="https://wa.me/584246279056?text=¡Hola!%20Me%20gustaría%20ordenar." 
           type="button"
           target="_blank"
           rel="noopener noreferrer"
           style={{
             bottom: '2rem',
-            right: '90px',
+            right: '120px',
             fontWeight: 300
           }}
         >
