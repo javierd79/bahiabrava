@@ -15,7 +15,7 @@ function Menu() {
           <div className='father flex w-full justify-center' style={{
             background: 'rgb(33, 36, 42)',
           }}>
-            <div className='xs:pt-0 pt-8 pr-3'>
+            <div className='xs:pt-0 pt-5 pr-3'>
               <a
                 className="sm:text-md opacity-100 hover:opacity-100 hover:bg-sky-200 p-4 mx-5 text-xs bg-white mt-0 rounded-xs shadow-lg"
                 href="https://wa.me/584246279056?text=¡Hola!%20Me%20gustaría%20ordenar."
