@@ -24,9 +24,7 @@ const PDFViewer = () => {
   }, []);
 
   return (
-    <div className="h-screen w-full px-5" ref={viewerRef}>
-      
-    </div>
+    <div className="h-screen w-full px-5" ref={viewerRef} />
   );
 };
 
