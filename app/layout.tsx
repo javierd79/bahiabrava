@@ -1,5 +1,6 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,7 +18,10 @@ export default function RootLayout({
     <html lang="es">
       <body className={inter.className} style={{
         overflowY: 'hidden'
-      }}>{children}</body>
+      }}>
+        {children}
+        <SpeedInsights />
+      </body>
     </html>
   )
 }
