@@ -20,7 +20,13 @@ export default function Home() {
           Escanea nuestro menú aquí
         </p>
         <div className='flex flex-row items-center justify-center pt-2'>
-          <Image className="object-cover object-center rounded-md" alt="QR" width={300} height={300} src='/qr.png'/>
+          <Image 
+            alt="QR" 
+            width={300} 
+            height={300} 
+            src='/qrBahia.png'
+            className="object-cover object-center rounded-md" 
+          />
         </div>
       </section>
     </main>
