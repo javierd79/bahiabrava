@@ -30,7 +30,7 @@ const PDFViewer = () => {
       ref={viewerRef} 
       className="w-full px-5 z-20" 
       style={{
-        height: 'calc(94vh - 8rem)'
+        height: 'calc(90vh - 8rem)'
       }} 
     />
   );
